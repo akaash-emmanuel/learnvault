@@ -1,0 +1,39 @@
+.categories-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    font-family: 'AppleGothic', Arial, sans-serif; /* Matches the prompt font */
+}
+
+.prompt-container h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: 2px solid rgba(178, 190, 181, 0.6); /* Translucent border */
+    border-radius: 4px;
+    background-color: #1e1e1e; /* Button background color */
+    color: white; /* Button text color */
+    font-family: 'AppleGothic', Arial, sans-serif; /* Matches the prompt font */
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    border-color: #B2BEB5; /* Solid border on hover */
+}

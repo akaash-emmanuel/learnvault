@@ -1,0 +1,85 @@
+/* Main container to center the content */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    z-index: 1;
+    color: #251984;
+    background: transparent;
+    overflow: hidden;
+}
+
+/* Container for prompt, search box */
+.content-container {
+    display: flex;
+    flex-direction: column; /* Stack the prompt text and input elements vertically */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Styling for the prompt text */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-family: 'AppleGothic', Arial, sans-serif;
+    color: #9b90f9;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Container for the search bar */
+.input-container {
+    display: flex; /* This will put the search bar in a row */
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Adds space between the elements */
+    margin-top: 20px;
+    width: 100%; /* Ensure the width takes up full container */
+}
+
+/* Styles for the Search Box */
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 450px; /* Limits the width of the search box */
+    margin-right: 15px;
+    margin-top: -10px; /* Adjust for vertical alignment */
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+}
+
+.input::placeholder {
+    color: #9e9ea7;
+}
+
+.input:focus, .input:hover {
+    outline: none;
+    border-color: rgba(103, 44, 240, 0.4);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+}
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+}
