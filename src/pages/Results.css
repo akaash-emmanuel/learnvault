@@ -1,51 +1,96 @@
-/* Main container styles */
 .results-container {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background-color: #1e1e1e; /* Matches site background */
+    background-color: #1e1e1e; 
     color: white;
     text-align: center;
-    margin-top: 110px; /* Ensure text doesn't overlap navbar */
-}
-
-/* Prompt styling */
-.results-prompt {
-    margin-bottom: 20px;
-    font-size: 1.8rem;
+    font-family: 'AppleGothic', Arial, sans-serif;
+    margin-top: 110px; 
+  }
+  
+  .results-prompt {
+    margin-bottom: 30px;
+    font-size: 2rem;
     text-align: center;
-    font-family: 'AppleGothic', Arial, sans-serif; /* Match prompt font style */
-}
-
-/* Results list container */
-.results-list {
-    width: 100%;
+    font-family: 'AppleGothic', Arial, sans-serif;
+    color: #B2BEB5;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .results-list {
+    width: 80%;
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Add space between rectangles */
+    gap: 20px;
     align-items: center;
-}
-
-/* Individual rectangle styles */
-.result-rectangle {
-    width: 80%; /* Set width relative to screen */
-    padding: 50px 15px; /* Increase vertical padding for height */
-    background-color: #1e1e1e; /* Match overall background color */
-    border: 2px solid rgba(178, 190, 181, 0.6); /* Translucent border */
-    border-radius: 4px; /* Smooth edges */
-    font-size: 1.4rem; /* Increase font size for readability */
-    color: white; /* White text for contrast */
-    text-align: left; /* Align text to the left */
+  }
+  
+  .result-rectangle {
+    width: 100%;
+    max-width: 800px; 
+    padding: 25px;
+    background-color: #2f2f2f;
+    border: 2px solid rgba(178, 190, 181, 0.6);
+    border-radius: 8px;
+    font-size: 1.4rem;
+    color: white;
+    text-align: left;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-    font-family: 'AppleGothic', Arial, sans-serif; /* Match font to prompt */
-}
-
-/* Hover effects */
-.result-rectangle:hover {
+    font-family: 'AppleGothic', Arial, sans-serif;
+  }
+  
+  .result-rectangle:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Soft white shadow on hover */
-    border-color: #B2BEB5; /* Brighten border */
-}
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15); 
+    border-color: #B2BEB5; 
+  }
+  
+  .result-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #B2BEB5;
+    margin-bottom: 10px;
+    text-decoration: underline;
+  }
+  
+  .result-description {
+    font-size: 1.2rem;
+    color: #d1d1d1;
+    margin-bottom: 15px;
+  }
+  
+  .result-link {
+    font-size: 1.2rem;
+    color: #64b5f6;
+    text-decoration: none;
+    border: 1px solid #64b5f6;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .result-link:hover {
+    background-color: #64b5f6;
+    color: white;
+  }
+  
+
+  .no-results {
+    color: #ff6f61;
+    font-size: 1.5rem;
+    margin-top: 30px;
+  }
+  
+
+  .results-heading {
+    font-size: 1.8rem;
+    color: #B2BEB5;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  

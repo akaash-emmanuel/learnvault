@@ -1,16 +1,14 @@
-/* Navbar.css */
-
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    margin: 0; /* Only add side padding as desired */
-    background-color: rgba(30, 30, 30, 0.95); /* Reduced opacity for the background */
+    margin: 0; 
+    background-color: rgba(30, 30, 30, 0.95); 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px; /* Adjust as needed */
+    height: 70px; 
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -23,12 +21,12 @@
 }
 
 .logo-learn {
-    color: #877be0; /* Purple color for "Learn" */
+    color: #877be0;
     text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
 
 .logo-vault {
-    color: #ECDFCC; /* Beige color for "Vault" */
+    color: #ECDFCC; 
     text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
 
@@ -40,7 +38,7 @@
 }
 
 .navbar-links a {
-    color: #ECDFCC; /* Beige color for links */
+    color: #ECDFCC; 
     text-decoration: none;
     font-family: 'AppleGothic', Arial, sans-serif;
     font-size: 16px;
@@ -48,6 +46,6 @@
 }
 
 .navbar-links a:hover {
-    color: #A79EEA; /* Change to purple on hover */
+    color: #A79EEA; 
 }
 

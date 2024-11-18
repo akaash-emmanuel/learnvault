@@ -7,9 +7,10 @@ function Home() {
     const navigate = useNavigate();
 
     const handleKeyDown = (event) => {
-        if (event.key === 'Enter') {
-            console.log('Navigating to categories with query:', searchQuery);  // Debugging
+        if (event.key === 'Enter' && searchQuery.trim() !== '') {
             navigate('/categories', { state: { query: searchQuery } });
+        } else if (event.key === 'Enter') {
+            alert('Please enter a valid search query.');
         }
     };
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './Categories.css';
 
@@ -6,13 +6,42 @@ const Categories = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    const { query } = location.state || {};  // Get query from Home page
+    const { query } = location.state || {}; 
 
-    const [selectedOption, setSelectedOption] = useState('');
+    if (!query) {
+        return <div>Error: No search query provided. Please go back to the Home page.</div>;
+    }
 
-    const handleOptionSelect = (option) => {
-        setSelectedOption(option);
-        navigate('/results', { state: { query, option } });
+    const handleOptionSelect = async (option) => {
+        console.log('Option selected:', option);
+        try {
+            const response = await fetch('http://localhost:5000/api/search', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ 
+                    query: query, 
+                    type: option,  
+                    max_results: 10  
+                }),
+            });
+
+            console.log('Response Status:', response.status);
+            if (!response.ok) {
+                throw new Error('Failed to fetch results from backend.');
+            }
+
+            const data = await response.json();
+            console.log('Response Data:', data);
+
+            if (data && data.results) {
+                navigate('/results', { state: { query, option, results: data.results } });
+            } else {
+                alert('No results found');
+            }
+        } catch (error) {
+            console.error('Error fetching results:', error);
+            alert('Failed to fetch results. Please try again.');
+        }
     };
 
     return (
@@ -21,9 +50,8 @@ const Categories = () => {
                 <h3>Pick method of study</h3>
             </div>
             <div className="button-container">
-                <button onClick={() => handleOptionSelect('Video')}>Video</button>
-                <button onClick={() => handleOptionSelect('AudioBook')}>AudioBook</button>
-                <button onClick={() => handleOptionSelect('PDF')}>PDF</button>
+                <button onClick={() => handleOptionSelect('visual')}>Video</button>
+                <button onClick={() => handleOptionSelect('web')}>Web</button>
             </div>
         </div>
     );

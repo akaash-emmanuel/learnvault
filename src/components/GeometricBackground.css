@@ -8,10 +8,10 @@
     overflow: hidden;
     background-color: #1e1e1e;
     background-image: 
-    linear-gradient(45deg, transparent 70%, rgba(255, 255, 255, 0.3) 70%), /* Adjust opacity here */
+    linear-gradient(45deg, transparent 70%, rgba(255, 255, 255, 0.3) 70%), 
     linear-gradient(-45deg, transparent 70%, rgba(255, 255, 255, 0.3) 70%);
-    background-size: 360px 360px; /* This controls the triangle size */
-    background-position: 0 0, 360px 240px; /* Position the background to create the gap */
+    background-size: 360px 360px; /* this controls the triangle size */
+    background-position: 0 0, 360px 240px; /* position the background to create the gap */ /*the rectangle box sort of thing that adds flavour to the design*/
     
 }
 

@@ -5,7 +5,7 @@
     justify-content: center;
     height: 100vh;
     text-align: center;
-    font-family: 'AppleGothic', Arial, sans-serif; /* Matches the prompt font */
+    font-family: 'AppleGothic', Arial, sans-serif; 
 }
 
 .prompt-container h3 {
@@ -23,11 +23,11 @@
 button {
     padding: 10px 20px;
     font-size: 1.2rem;
-    border: 2px solid rgba(178, 190, 181, 0.6); /* Translucent border */
+    border: 2px solid rgba(178, 190, 181, 0.6); 
     border-radius: 4px;
-    background-color: #1e1e1e; /* Button background color */
-    color: white; /* Button text color */
-    font-family: 'AppleGothic', Arial, sans-serif; /* Matches the prompt font */
+    background-color: #1e1e1e; 
+    color: white; 
+    font-family: 'AppleGothic', Arial, sans-serif; 
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
@@ -35,5 +35,5 @@ button {
 button:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-    border-color: #B2BEB5; /* Solid border on hover */
+    border-color: #B2BEB5; 
 }

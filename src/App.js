@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Categories from './pages/Categories';
-import Results from './pages/Results';  // Ensure Results is imported
+import Results from './pages/Results';  
 import GeometricBackground from './components/GeometricBackground';
 
 function App() {
